@@ -11,10 +11,20 @@ gem 'sqlite3'
 gem 'rails-i18n'
 #Flexible authentication solution for Rails with Warden.
 gem 'devise'
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
+
+source 'https://rails-assets.org' do
+  #Notify JS
+  gem 'rails-assets-notifyjs'
+  #Boostrap
+  gem 'rails-assets-bootstrap', '3.3.7'
+  #Bootbox JS
+  gem 'rails-assets-bootbox'
+end
+
 #Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
+#Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
+gem 'enum_help'
 #Translations for the devise gem
 gem 'devise-i18n'
 #A gem to automate using jQuery with Rails
@@ -64,6 +74,8 @@ group :development do
   gem 'better_errors'
   #Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
+  #A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
 end
 
 
