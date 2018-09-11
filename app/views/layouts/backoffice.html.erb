@@ -52,9 +52,7 @@
         <!-- /#wrapper -->
 
     <% if notice %>
-        <script>
-            $.notify("<%= notice %>", "success");
-        </script>
+        <%= javascript_tag "$.notify('#{notice}', 'success');" %>
     <% end %>
 
     <% if alert %>

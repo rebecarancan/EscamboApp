@@ -13,6 +13,8 @@ gem 'rails-i18n'
 gem 'devise'
 #Minimal authorization through OO design and pure Ruby classes
 gem "pundit"
+#Easy file attachment management for ActiveRecord
+gem "paperclip", "~> 6.0.0"
 
 source 'https://rails-assets.org' do
   #Notify JS
@@ -23,6 +25,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
 end
 
+#Integration of RubyMoney - Money with Rails
+gem 'money-rails', '~>1'
 #Rails gem of the Bootstrap based admin theme SB Admin 2
 gem 'bootstrap_sb_admin_base_v2'
 #Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
@@ -76,6 +80,8 @@ group :development do
   gem 'rails-erd'
   #A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
+  #O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+  gem 'lerolero_generator'
   #Catches mail and serves it through a dream.
   gem 'mailcatcher'
 end
