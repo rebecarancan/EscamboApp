@@ -7,7 +7,12 @@ Rails.application.configure do
   config.cache_classes = false
 
   #Devise Config
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #Mail Catcher
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+  config.action_mailer.raise_delivery_errors = false
 
   # Do not eager load code on boot.
   config.eager_load = false

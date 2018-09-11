@@ -75,7 +75,9 @@ group :development do
   #Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
   #A library for generating fake data such as names, addresses, and phone numbers.
-gem 'faker'
+  gem 'faker'
+  #Catches mail and serves it through a dream.
+  gem 'mailcatcher'
 end
 
 
