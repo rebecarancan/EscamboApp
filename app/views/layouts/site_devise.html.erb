@@ -2,19 +2,22 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EscamboApp</title>
-
-    <%= stylesheet_link_tag 'application' %>
-    <%= stylesheet_link_tag 'site' %>
+    <title>BackOffice - EscamboApp</title>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'backoffice' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'backoffice' %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,15 +29,8 @@
 </head>
 
 <body>
-
-    <div id="global-spin" class="loading" style="display: none;">Loading&#8230;</div>
-    <%= render partial: "layouts/site_shared/navigation" %>
     <%= yield %>
-    <%= render partial: "layouts/site_shared/footer" %>
-
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'site' %>
-
 </body>
 
 </html>
+

@@ -63,26 +63,34 @@ puts "ADMINISTRADORES gerados com sucesso!"
     5.times do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
-        description: LeroleroGenerator.paragraph(Random.rand(3)),
+        description_md: markdown_fake,
+        description_short: Faker::Lorem.sentence([2,3,4,5].sample),
         member: Member.first,
         category: Category.all.sample,
         price: "#{Random.rand(500)},#{Random.rand(99)}",
-        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
+        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r'),
+        finish_date: Date.today + Random.rand(90)
       )
     end
 
     50.times do
       Ad.create!(
         title: Faker::Lorem.sentence([2,3,4,5].sample),
-        description: LeroleroGenerator.paragraph(Random.rand(3)),
+        description_md: markdown_fake,
+        description_short: Faker::Lorem.sentence([2,3,4,5].sample),
         member: Member.all.sample,
         category: Category.all.sample,
         price: "#{Random.rand(500)},#{Random.rand(99)}",
-        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
+        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r'),
+        finish_date: Date.today + Random.rand(90)
       )
     end
 
     puts "ANÚNCIOS cadastrados com sucesso!"
   end
+
+def markdown_fake
+  %x(ruby -e "require 'doctor_ipsum'; puts DoctorIpsum::Markdown.entry")
+end
 
 end

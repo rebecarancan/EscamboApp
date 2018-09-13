@@ -15,14 +15,22 @@ gem 'devise'
 gem "pundit"
 #Easy file attachment management for ActiveRecord
 gem "paperclip", "~> 6.0.0"
+#The safe Markdown parser, reloaded.
+gem 'redcarpet'
 
 source 'https://rails-assets.org' do
-  #Notify JS
-  gem 'rails-assets-notifyjs'
+  #Boostrap Notify
+  gem 'rails-assets-bootstrap.growl'
   #Boostrap
   gem 'rails-assets-bootstrap', '3.3.7'
   #Bootbox JS
   gem 'rails-assets-bootbox'
+  #Animate CSS
+  gem 'rails-assets-animate-css'
+  #Bootstrap Markdown
+  gem 'rails-assets-bootstrap-markdown'
+  #A markdown parser built for speed
+  gem 'rails-assets-marked'
 end
 
 #Integration of RubyMoney - Money with Rails
@@ -35,6 +43,8 @@ gem 'enum_help'
 gem 'devise-i18n'
 #A gem to automate using jQuery with Rails
 gem 'jquery-rails'
+#jQuery UI for the Rails asset pipeline
+gem 'jquery-ui-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -80,6 +90,8 @@ group :development do
   gem 'rails-erd'
   #A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker'
+  #Markdown Lorem Ipsum generator
+  gem 'doctor_ipsum'
   #O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
   gem 'lerolero_generator'
   #Catches mail and serves it through a dream.

@@ -1,0 +1,8 @@
+<% if notice %>
+  <%= javascript_tag "$.notify( {message: '#{notice}'}, { type: 'success', offset: 70});" %>
+<% end %>
+
+<% if alert %>
+  <%= javascript_tag "$.notify( {message: '#{alert}'}, { type: 'danger', offset: 70});" %>
+<% end %>
+

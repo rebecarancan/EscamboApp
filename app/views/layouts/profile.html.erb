@@ -10,13 +10,10 @@
 
     <title>EscamboApp</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= stylesheet_link_tag    'site', media: 'all' %>
-    <%= stylesheet_link_tag    'site/profile', media: 'all' %>
+    <%= stylesheet_link_tag    'application' %>
+    <%= stylesheet_link_tag    'site' %>
+    <%= stylesheet_link_tag    'site/profile' %>
 
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag 'site' %>
-    <%= javascript_include_tag 'site/profile' %>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -71,9 +68,14 @@
     </div>
     <!-- /#wrapper -->
 
-    <% if notice %>
-        <%= javascript_tag "$.notify('#{notice}', 'success');" %>
-    <% end %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'site' %>
+    <%= javascript_include_tag 'site/profile' %>
+    <%#= javascript_include_tag 'site/profile/ads' %>
+
+    <%= yield :javascripts %>
+
+    <%= render partial: 'layouts/shared/notifications' %>
 
 </body>
 

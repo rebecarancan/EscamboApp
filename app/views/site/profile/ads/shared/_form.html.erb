@@ -1,3 +1,7 @@
+<%= content_for :javascripts do %>
+  <%= javascript_include_tag 'site/profile/ads' %>
+<% end %>
+
 <%= form_for([:site, :profile, @ad], html: { multipart: true }) do |f| %>
 
   <% if @ad.errors.any? %>
@@ -35,11 +39,25 @@
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-xs-12">
-      <%= f.label :description %>
-      <%= f.text_area :description, class: "form-control", rows: 10 %>
+    <div class="form-group col-xs-3">
+      <%= f.label :finish_date %>
+      <%= f.text_field :finish_date, class: "form-control datepicker", value: (l(@ad.finish_date) unless @ad.finish_date.blank?) %>
     </div>
   </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-12">
+      <%= f.label :description_short %>
+      <%= f.text_area :description_short, class: "form-control", rows: 5 %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-12">
+      <%= f.label :description_md %>
+      <%= f.text_area :description_md, class: "form-control", rows: 10, data: { provide: 'markdown'} %>
+    </div>
+  </div>
+
   <div class="row">
     <div class="form-group col-xs-6">
       <%= f.label :picture %> <br>
