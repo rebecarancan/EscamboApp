@@ -2,8 +2,12 @@ class Ad < ApplicationRecord
   belongs_to :member
   belongs_to :category
 
+  # Validates
+  validates_presence_of :title, :description, :category, :price, :picture
+
   #Scopes
-  scope :last_six, -> { limit(6).order(created_at: :desc) }
+  scope :descending_order, ->(quantity = 12) { limit(quantity).order(created_at: :desc) }
+  scope :to_the, ->(member) { where(member: member) }
 
   # paperclip
   has_attached_file :picture, styles: { medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"

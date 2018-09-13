@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#Cadastro de categorias padrão
+
 puts "Cadastrando as CATEGORIAS..."
 
 categories = [ "Animais e acessórios",
@@ -27,7 +29,7 @@ puts "CATEGORIAS cadastradas com sucesso!"
 
 #Cadastro de Administrador Padrão
 
-puts "Cadastrando o ADMINISTRADOR..."
+puts "Cadastrando o ADMINISTRADOR padrão..."
 
 Admin.create!(
   name: "Administrador Geral",
@@ -37,4 +39,16 @@ Admin.create!(
   role: 0
   )
 
-puts "ADMINISTRADOR cadastrado com sucesso!"
+puts "ADMINISTRADOR padrão cadastrado com sucesso!"
+
+#Cadastro do Membro Padrão
+
+puts "Cadastrando o MEMBRO padrão..."
+
+Member.create!(
+  email: "member@member.com",
+  password: "123456",
+  password_confirmation: "123456"
+  )
+
+puts "MEMBRO padrão cadastrado com sucesso!"
