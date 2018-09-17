@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Dependências do projeto
 
-Things you may want to cover:
+*ImageMagick (https://www.imagemagick.org)
 
-* Ruby version
+```
+sudo apt_get update
+sudo apt_get install imagemagick
 
-* System dependencies
+*Graphviz (http://www.graphviz.org) - Apenas para Ambiente de Desenvolvimento
 
-* Configuration
+```
+sudo apt_get update
+sudo apt_get install graphviz
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

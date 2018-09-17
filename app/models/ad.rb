@@ -1,5 +1,8 @@
 class Ad < ApplicationRecord
 
+  #Constants
+  QTT_PER_PAGE = 6
+
   #Callbacks
   before_save :md_to_html
 
@@ -12,9 +15,17 @@ class Ad < ApplicationRecord
   validates :price, numericality: {greater_than: 0}
 
   #Scopes
-  scope :descending_order, ->(quantity = 12) { limit(quantity).order(created_at: :desc) }
+  scope :descending_order, ->(page) {
+    order(created_at: :desc).page(page).per(QTT_PER_PAGE)
+  }
+
+  scope :search, ->(term) {
+    where("title LIKE ?", "%#{term}%").page(page).per(QTT_PER_PAGE)
+  }
+
   scope :to_the, ->(member) { where(member: member) }
-  scope :where_categoy, ->(id) { where(category: id) }
+  scope :by_category, ->(id) { where(category: id) }
+
 
   # paperclip
   has_attached_file :picture, styles: { large: "800x300#", medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
