@@ -3,12 +3,16 @@ class Ad < ApplicationRecord
   #Constants
   QTT_PER_PAGE = 6
 
+  #RatyRate gem
+  ratyrate_rateable 'quality'
+
   #Callbacks
   before_save :md_to_html
 
   #Associations
   belongs_to :member
   belongs_to :category, counter_cache: true
+  has_many :comments
 
   # Validates
   validates :title, :description_md, :description_short, :category, :picture, :finish_date, presence: true
