@@ -143,10 +143,9 @@ ActiveRecord::Schema.define(version: 2018_09_18_202439) do
     t.float "avg", null: false
     t.integer "qty", null: false
     t.string "dimension"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
-    t.index ["cacheable_type", "cacheable_id"], name: "index_rating_caches_on_cacheable_type_and_cacheable_id"
   end
 
 end

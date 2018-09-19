@@ -30,7 +30,5 @@
 
 
 <% flash.each do |key, value| %>
-    <script>
-        $.notify("<%= value %>", "info");
-    </script>
+    <%= javascript_tag "$.notify( {message: '#{value}'}, { type: 'danger', offset: 70});" %>
 <% end %>
