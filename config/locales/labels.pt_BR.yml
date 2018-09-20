@@ -1,0 +1,30 @@
+'pt-BR':
+  labels:
+    login: Entrar
+    identify_yourself: Identifique-se
+    remember_me: Lembre-se de mim
+    forgot_password: Esqueceu sua senha?
+    dont_have_an_account: Não tem uma conta?
+    sign_up: Cadastre-se
+    sign_up_here: Cadastre-se aqui!
+    sign_in_with_facebook: Entrar com Facebook
+    enter: Entrar
+    email: E-mail
+    password: Senha
+    message: Mensagem
+    new_message: Nova Mensagem
+    send_message_to: Enviar mensagem para %{name}
+    recipient: Destinatário
+    subject: Assunto
+    leave_your_comment: Deixe seu comentário
+    comment: Comentário
+    comments: Comentários
+    review: avaliação
+    reviews: avaliações
+    login_to_comment: Efetue login para comentar
+    er_diagram: Diagrama ER
+    password_change: Redefinição de senha
+    image: Imagem
+    title: Título
+    category: Categoria
+    price: Preço

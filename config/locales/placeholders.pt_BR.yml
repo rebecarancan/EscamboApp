@@ -1,0 +1,12 @@
+'pt-BR':
+  placeholder:
+    search_for: Pesquisar por...
+    email: E-mail
+    password: Senha
+    password_confirmation: Confirmação de senha
+    name: Nome
+    second_name: Sobrenome
+    admin_email: Email do Administrador
+    exemple_category: "Ex: Animais/Pet"
+    title: Título
+    price: Preço

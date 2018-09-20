@@ -3,7 +3,7 @@ $(function(){
 
   // Setting email and name on Form
   $('#recipient-name').val('<%= @admin.email %>');
-  $('h4.modal-title').text('Enviar mensagem para <%= @admin.name %>');
+  $('h4.modal-title').text("<%= I18n.t('labels.send_message_to', name: @admin.name) %>");
 
   // Shows Modal
   $('#sendMailModal').modal();

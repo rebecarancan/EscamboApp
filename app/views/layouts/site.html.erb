@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EscamboApp</title>
+    <title><%= t('app.name') %></title>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': true %>
     <%= stylesheet_link_tag 'site', media: 'all', 'data-turbolinks-track': true %>
@@ -41,9 +41,9 @@
                         <div class="col-lg-3"></div>
                           <div class="col-lg-6">
                             <div class="input-group">
-                              <%= text_field_tag(:q, params[:q], class:"form-control", placeholder:"Pesquisar por...") %>
+                              <%= text_field_tag(:q, params[:q], class:"form-control", placeholder: "#{t('placeholder.search_for')}") %>
                               <span class="input-group-btn">
-                                <%= submit_tag("Pesquisar", class:"btn btn-default" ) %>
+                                <%= submit_tag("#{t('buttons.search')}", class:"btn btn-default" ) %>
                               </span>
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
@@ -60,7 +60,7 @@
             <div id="home-detail" class="col-md-9">
 
                 <% if controller_path == 'site/home' %>
-                    <%= render partial: 'layouts/site_shared/carrousel' %>
+                    <%= render partial: 'layouts/site_shared/carousel' %>
                 <% end %>
 
                 <div class="row">

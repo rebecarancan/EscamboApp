@@ -4,21 +4,20 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Deixe seu comentário</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h3 class="modal-title" id="exampleModalLabel"><%= t('labels.leave_your_comment') %></h3>
       </div>
       <div class="modal-body">
         <div class="form-group">
-            <label>Comentário</label>
+            <label><%= t('labels.comment') %></label>
             <%= text_area :comment, :body, class:"form-control", rows: 5 %>
             <%= hidden_field :comment, :ad_id, value: @ad.id %>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <%= submit_tag "Enviar", class: "btn btn-primary" %>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          <%= t('buttons.close') %>
+        </button>
+        <%= submit_tag " #{t('buttons.send')} ", class: "btn btn-primary" %>
       </div>
     </div>
   </div>
