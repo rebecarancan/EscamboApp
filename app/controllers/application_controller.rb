@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :store_current_location, :unless => :devise_controller?
 
   #Pundit
   include Pundit
@@ -31,6 +32,6 @@ class ApplicationController < ActionController::Base
   private
 
     def store_current_location
-      stored_location_for(:member, request.url)
+      store_location_for(:member, request.url)
     end
 end

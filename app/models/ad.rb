@@ -24,7 +24,7 @@ class Ad < ApplicationRecord
   }
 
   scope :search, ->(term) {
-    where("title LIKE ?", "%#{term}%").page(page).per(QTT_PER_PAGE)
+    where("lower(title) LIKE ?", "%#{term.downcase}%").page(page).per(QTT_PER_PAGE)
   }
 
   scope :to_the, ->(member) { where(member: member) }
@@ -33,7 +33,7 @@ class Ad < ApplicationRecord
   scope :random, ->(quantity) {limit(quantity).order("RANDOM()")}
 
   # paperclip
-  has_attached_file :picture, styles: { large: "800x300#", medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :picture, styles: { large: "900x350#", medium: "320x150#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :picture, content_type: /\Aimage\/.*\z/
 
   #gem money_rails

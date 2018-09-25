@@ -19,8 +19,6 @@ gem "paperclip", "~> 6.0.0"
 gem 'redcarpet'
 #FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord.
 gem 'friendly_id'
-#Rails engine for Turbolinks integration
-gem 'turbolinks', '~> 5.1.0'
 #A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
 #Translations for the kaminari gem

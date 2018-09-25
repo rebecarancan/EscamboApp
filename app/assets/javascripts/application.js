@@ -14,7 +14,6 @@
 //= require activestorage
 //= require jquery
 //= require bootstrap.growl
-//= require turbolinks
 
 /* Spin */
 $(document).ready(function() {

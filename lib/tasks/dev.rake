@@ -88,7 +88,7 @@ puts "ADMINISTRADORES gerados com sucesso!"
         member: Member.all.sample,
         category: Category.all.sample,
         price: "#{Random.rand(500)},#{Random.rand(99)}",
-        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r'),
+        picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(10)}.jpg"), 'r'),
         finish_date: Date.today + Random.rand(90)
       )
     end
