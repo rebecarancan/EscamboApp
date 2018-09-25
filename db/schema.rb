@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_25_180030) do
+ActiveRecord::Schema.define(version: 2018_09_25_183517) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2018_09_25_180030) do
     t.date "finish_date"
     t.text "description_md"
     t.text "description_short"
+    t.integer "status", default: 0
     t.index ["category_id"], name: "index_ads_on_category_id"
     t.index ["member_id"], name: "index_ads_on_member_id"
   end
@@ -110,11 +111,11 @@ ActiveRecord::Schema.define(version: 2018_09_25_180030) do
   create_table "orders", force: :cascade do |t|
     t.integer "ad_id"
     t.integer "status", default: 0
-    t.integer "buyer_id"
+    t.integer "member_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ad_id"], name: "index_orders_on_ad_id"
-    t.index ["buyer_id"], name: "index_orders_on_buyer_id"
+    t.index ["member_id"], name: "index_orders_on_member_id"
   end
 
   create_table "overall_averages", force: :cascade do |t|

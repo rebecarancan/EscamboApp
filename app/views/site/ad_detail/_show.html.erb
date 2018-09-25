@@ -3,14 +3,23 @@
     <div class="caption-full">
         <h4 class="pull-left"><%= humanized_money_with_symbol @ad.price %></h4>
 
-        <% if member_signed_in? %>
-            <div class="text-right">
-                <%= link_to "#{t('buttons.buy')}", '#', class:"btn btn-success" %>
-            </div>
+        <% if @ad.active? %>
+            <% if member_signed_in? %>
+                <div class="text-right">
+                    <%= form_tag(checkout_payments_path) do %>
+                        <%= hidden_field_tag :ad_id, @ad.id %>
+                        <%= submit_tag "#{t('buttons.buy')}", class:"btn btn-success", data: { confirm: "#{t('messages.confirm_order')}" } %>
+                    <% end %>
+                </div>
+            <% else %>
+                <div class="text-right">
+                    <%= link_to "#{t('labels.login_to_buy')}", new_member_session_path, class:"btn btn-success" %>
+                </div>
+            <% end %>
         <% else %>
-            <div class="text-right">
-                <%= link_to "#{t('labels.login_to_buy')}", new_member_session_path, class:"btn btn-success" %>
-            </div>
+          <div class="text-right">
+            <%= link_to "#{@ad.status_i18n}", '#', class:"btn btn-success", disabled: true %>
+          </div>
         <% end %>
 
         <h2><a href="#"><%= @ad.title %></a>

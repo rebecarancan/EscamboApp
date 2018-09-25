@@ -25,6 +25,8 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 #A Ruby Gem that wraps the functionality of jQuery Raty library, and provides optional IMDB style rating.
 gem 'ratyrate'
+#Biblioteca de integração em Ruby para Pagseguro
+gem "pagseguro-oficial", "~> 2.5.0"
 
 source 'https://rails-assets.org' do
   #Boostrap Notify

@@ -17,3 +17,4 @@
     not_authorized: Você não está autorizado a executar essa ação.
     email_delivered: Email enviado com sucesso!
     email_not_delivered: Erro ao enviar email. Tente novamente
+    confirm_order: Deseja realmente comprar esse produto?

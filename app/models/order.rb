@@ -5,5 +5,5 @@ class Order < ApplicationRecord
 
   # Associations
   belongs_to :ad
-  belongs_to :buyer, class_name: "Member"
+  belongs_to :member
 end
