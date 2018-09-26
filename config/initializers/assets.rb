@@ -15,6 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( site/profile/ads.js
                                                   site/profile.js
+                                                  charts.js
                                                   backoffice.js
                                                   site.js )
 Rails.application.config.assets.precompile += %w( site/profile/ads.css
