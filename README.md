@@ -1,5 +1,11 @@
 # README
 
+## Estudo de sistema de classificados online em Ruby on Rails
+
+* Ruby version: 2.5.0
+
+* Rails version: 5.2.1
+
 ## Dependências do projeto
 
 * ImageMagick (https://www.imagemagick.org)
