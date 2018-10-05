@@ -33,7 +33,7 @@ class Ad < ApplicationRecord
   #   where("lower(title) LIKE ?", "%#{term.downcase}%").page(page).per(QTT_PER_PAGE)
   # }
 
-  scope :to_the, ->(member, page) { where(member: member) }
+  scope :to_the, ->(member) { where(member: member) }
   scope :by_category, ->(id, page) { where(category: id).page(page).per(QTT_PER_PAGE) }
 
   scope :random, ->(quantity) {limit(quantity).order("RANDOM()")}
