@@ -28,7 +28,7 @@ gem 'ratyrate'
 #Biblioteca de integração em Ruby para Pagseguro
 gem "pagseguro-oficial", "~> 2.5.0"
 #Create beautiful JavaScript charts with one line of Ruby
-gem "chartkick"
+gem 'chartkick', '>= 3.2.0'
 #Intelligent search made easy with Rails and Elasticsearch
 gem 'searchkick'
 
