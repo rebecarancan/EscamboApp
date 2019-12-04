@@ -59,7 +59,7 @@ GEM
       jquery-rails
     builder (3.2.3)
     byebug (10.0.2)
-    chartkick (3.2.0)
+    chartkick (3.3.0)
     choice (0.2.0)
     climate_control (0.2.0)
     coderay (1.1.2)
